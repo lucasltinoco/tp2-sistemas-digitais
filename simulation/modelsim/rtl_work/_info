@@ -1,0 +1,200 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\porop\Documents\UFSC\TP2\simulation\modelsim
+Edivide
+Z1 w1658804986
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dC:\Users\porop\Documents\UFSC\TP2\simulation\modelsim
+Z7 8C:/Users/porop/Documents/UFSC/TP2/divide.vhd
+Z8 FC:/Users/porop/Documents/UFSC/TP2/divide.vhd
+l0
+L5
+V7Ba<38CMz5bN4[5OOmhVP3
+Z9 OV;C;10.1d;51
+31
+Z10 !s108 1658941065.364000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/porop/Documents/UFSC/TP2/divide.vhd|
+Z12 !s107 C:/Users/porop/Documents/UFSC/TP2/divide.vhd|
+Z13 o-93 -work work -O0
+Z14 tExplicit 1
+!s100 G6O9EAQ[CdPUW4:d<3OCC1
+!i10b 1
+Acomportamento
+R2
+R3
+R4
+R5
+DEx4 work 6 divide 0 22 7Ba<38CMz5bN4[5OOmhVP3
+l39
+L20
+Vb4AfR?SlY8SzeZP8F`;zS3
+R9
+31
+R10
+R11
+R12
+R13
+R14
+!s100 VfS71R2KL2M@<0f7[6g^;2
+!i10b 1
+Ememory
+Z15 w1658891189
+R2
+R3
+R4
+R5
+R6
+Z16 8C:/Users/porop/Documents/UFSC/TP2/memory.vhd
+Z17 FC:/Users/porop/Documents/UFSC/TP2/memory.vhd
+l0
+L7
+V1diISEW80]IU`X2=2PeeC0
+!s100 mi:Nk7zO<^ljDNI`Ygd4G3
+R9
+31
+!i10b 1
+Z18 !s108 1658941065.503000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/porop/Documents/UFSC/TP2/memory.vhd|
+Z20 !s107 C:/Users/porop/Documents/UFSC/TP2/memory.vhd|
+R13
+R14
+Aarch
+R2
+R3
+R4
+R5
+DEx4 work 6 memory 0 22 1diISEW80]IU`X2=2PeeC0
+l54
+L19
+V`;VRi:fCR`S>3M:Ni=OzJ2
+!s100 GB_LfnTV]BolNP1>?2d8z2
+R9
+31
+!i10b 1
+R18
+R19
+R20
+R13
+R14
+Emultiply
+Z21 w1658809758
+R2
+R3
+R4
+R5
+R6
+Z22 8C:/Users/porop/Documents/UFSC/TP2/multiply.vhd
+Z23 FC:/Users/porop/Documents/UFSC/TP2/multiply.vhd
+l0
+L5
+V?o<K4NahhCG[S3Ub8o8lQ0
+R9
+31
+Z24 !s108 1658941065.294000
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/porop/Documents/UFSC/TP2/multiply.vhd|
+Z26 !s107 C:/Users/porop/Documents/UFSC/TP2/multiply.vhd|
+R13
+R14
+!s100 mkj<L@8=JU54?c`llIB=42
+!i10b 1
+Acomportamento
+R2
+R3
+R4
+R5
+DEx4 work 8 multiply 0 22 ?o<K4NahhCG[S3Ub8o8lQ0
+l38
+L19
+VBH;j<>9FzLY@6YDYa?NUT1
+R9
+31
+R24
+R25
+R26
+R13
+R14
+!s100 ;6?dQebQT[fLg1hB:O2C]2
+!i10b 1
+Etrab2
+Z27 w1658892375
+R2
+R3
+R4
+R5
+R6
+Z28 8C:/Users/porop/Documents/UFSC/TP2/Trab2.vhd
+Z29 FC:/Users/porop/Documents/UFSC/TP2/Trab2.vhd
+l0
+L6
+V>YNaIK4P<FKYPf@?42Bb:1
+R9
+31
+Z30 !s108 1658941065.226000
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/porop/Documents/UFSC/TP2/Trab2.vhd|
+Z32 !s107 C:/Users/porop/Documents/UFSC/TP2/Trab2.vhd|
+R13
+R14
+!s100 =hDmoV?ZRUFdkWFQi[R@X1
+!i10b 1
+Acomportamento
+R2
+R3
+R4
+R5
+DEx4 work 5 trab2 0 22 >YNaIK4P<FKYPf@?42Bb:1
+l56
+L17
+VYabRRbe_`>hho_IY3dA^N2
+R9
+31
+R30
+R31
+R32
+R13
+R14
+!s100 [OohPjRiKoci?<ni0EXUO0
+!i10b 1
+Eula
+Z33 w1658893904
+R2
+R3
+R4
+R5
+R6
+Z34 8C:/Users/porop/Documents/UFSC/TP2/ULA.vhd
+Z35 FC:/Users/porop/Documents/UFSC/TP2/ULA.vhd
+l0
+L8
+VTPCUaR;9U?`oefHi@HH4U0
+R9
+31
+Z36 !s108 1658941065.435000
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/porop/Documents/UFSC/TP2/ULA.vhd|
+Z38 !s107 C:/Users/porop/Documents/UFSC/TP2/ULA.vhd|
+R13
+R14
+!s100 PE2SCHDSB>MZJ=:nQYJfo1
+!i10b 1
+Acomportamento
+R2
+R3
+R4
+R5
+DEx4 work 3 ula 0 22 TPCUaR;9U?`oefHi@HH4U0
+l69
+L23
+VMg>:Gi;hhROabz7YXH`Jz1
+R9
+31
+R36
+R37
+R38
+R13
+R14
+!s100 >@3GX2L>HGE:VboNaGCiY1
+!i10b 1

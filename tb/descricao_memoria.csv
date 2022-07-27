@@ -1,0 +1,30 @@
+Endereço,End Binário,Valor,Significado
+0,0,“00000001”,Opcode: 0001 => A + B
+1,1,“00110010”,Valor de A
+2,10,“00001100”,Valor de B
+3,11,“00000011”,Opcode: 0011 => A++
+4,100,“00011110”,Valor de A
+5,110,“00000010”,Opcode: 0010 => A - B
+6,111,“00110010”,Valor de A
+7,1000,“00001100”,Valor de B
+8,1001,“00000100”,Opcode: 0100 => A--
+9,1010,“00011110”,Valor de A
+10,1011,“00000101”,Opcode: 0101 => not(A)
+11,1100,“00011110”,Valor de A
+12,1101,“00000110”,Opcode: 0110 => (A and B) bit a bit
+13,1110,“00110010”,Valor de A
+14,1111,“00001100”,Valor de B
+15,10000,“00000111”,Opcode: 0111 => (A or B) bit a bit
+16,10001,“00110010”,Valor de A
+17,10010,“00001100”,Valor de B
+18,10011,“00001000”,Opcode: 1000 => (A xor B) bit a bit
+19,10100,“00110010”,Valor de A
+20,10101,“00001100”,Valor de B
+21,10110,“00001001”,Opcode: 1001 => A * B
+22,10111,“00110010”,Valor de A
+23,11000,“00001100”,Valor de B
+24,11001,“00001010”,Opcode: 1010 => A / B
+25,11010,“00110010”,Valor de A
+26,11011,“00001100”,Valor de B
+27,101,“00001111”,Opcode: 1111 => Halt (termina execução)
+28,11100,“000000000”,No operation
