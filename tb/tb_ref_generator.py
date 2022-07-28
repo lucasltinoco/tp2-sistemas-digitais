@@ -105,7 +105,7 @@ for entry in entries:
             print(int2bin(result), file=output_f)
 
             if optype == "divide":
-                print(int2bin(A % B), file=output_f)
+                print(int2bin(A % B, 8), file=output_f)
         elif can_operate_1_input:
             result = operation(A)
 

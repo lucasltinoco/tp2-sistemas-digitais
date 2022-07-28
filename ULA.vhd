@@ -75,6 +75,7 @@ B <= dadoB when start = '1' else (others => 'X');
 sop <= op when start = '1' else (others => 'X');
 
 result <= P;
+PQ <= sPQ;
 
 MULTX: multiply port map 
 				(clk => clk, EntA => A, EntB => B, mult => resMult, done => doneMult, rst => rstMult);
