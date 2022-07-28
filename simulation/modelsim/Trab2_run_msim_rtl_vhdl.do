@@ -5,9 +5,9 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vcom -93 -work work {C:/Users/porop/Documents/UFSC/TP2/Trab2.vhd}
-vcom -93 -work work {C:/Users/porop/Documents/UFSC/TP2/multiply.vhd}
-vcom -93 -work work {C:/Users/porop/Documents/UFSC/TP2/divide.vhd}
-vcom -93 -work work {C:/Users/porop/Documents/UFSC/TP2/ULA.vhd}
-vcom -93 -work work {C:/Users/porop/Documents/UFSC/TP2/memory.vhd}
+vcom -93 -work work {/home/lucastinoco/Documents/Sistemas Digitais/TP2_final/Trab2.vhd}
+vcom -93 -work work {/home/lucastinoco/Documents/Sistemas Digitais/TP2_final/multiply.vhd}
+vcom -93 -work work {/home/lucastinoco/Documents/Sistemas Digitais/TP2_final/divide.vhd}
+vcom -93 -work work {/home/lucastinoco/Documents/Sistemas Digitais/TP2_final/ULA.vhd}
+vcom -93 -work work {/home/lucastinoco/Documents/Sistemas Digitais/TP2_final/memory.vhd}
 

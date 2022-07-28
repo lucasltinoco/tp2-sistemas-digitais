@@ -1,16 +1,15 @@
-# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
 # do Trab2_run_msim_rtl_vhdl.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
 # vlib rtl_work
 # vmap work rtl_work
-# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Copying /home/lucastinoco/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
-# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+# ** Warning: Copied /home/lucastinoco/altera/13.0sp1/modelsim_ase/linux/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {C:/Users/porop/Documents/UFSC/TP2/Trab2.vhd}
+# vcom -93 -work work {/home/lucastinoco/Documents/Sistemas Digitais/TP2_final/Trab2.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -19,7 +18,7 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity Trab2
 # -- Compiling architecture comportamento of Trab2
-# vcom -93 -work work {C:/Users/porop/Documents/UFSC/TP2/multiply.vhd}
+# vcom -93 -work work {/home/lucastinoco/Documents/Sistemas Digitais/TP2_final/multiply.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -28,9 +27,8 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity multiply
 # -- Compiling architecture comportamento of multiply
-# ** Warning: C:/Users/porop/Documents/UFSC/TP2/multiply.vhd(22): (vcom-1073) Non-locally static choice (association #1, choice #1) is allowed only if it is the only choice of the only association.
-# 
-# vcom -93 -work work {C:/Users/porop/Documents/UFSC/TP2/divide.vhd}
+# ** Warning: /home/lucastinoco/Documents/Sistemas Digitais/TP2_final/multiply.vhd(22): (vcom-1073) Non-locally static choice (association #1, choice #1) is allowed only if it is the only choice of the only association.
+# vcom -93 -work work {/home/lucastinoco/Documents/Sistemas Digitais/TP2_final/divide.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -39,7 +37,7 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity divide
 # -- Compiling architecture comportamento of divide
-# vcom -93 -work work {C:/Users/porop/Documents/UFSC/TP2/ULA.vhd}
+# vcom -93 -work work {/home/lucastinoco/Documents/Sistemas Digitais/TP2_final/ULA.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -48,9 +46,8 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity ULA
 # -- Compiling architecture comportamento of ULA
-# ** Warning: C:/Users/porop/Documents/UFSC/TP2/ULA.vhd(28): (vcom-1074) Non-locally static OTHERS choice is allowed only if it is the only choice of the only association.
-# 
-# vcom -93 -work work {C:/Users/porop/Documents/UFSC/TP2/memory.vhd}
+# ** Warning: /home/lucastinoco/Documents/Sistemas Digitais/TP2_final/ULA.vhd(28): (vcom-1074) Non-locally static OTHERS choice is allowed only if it is the only choice of the only association.
+# vcom -93 -work work {/home/lucastinoco/Documents/Sistemas Digitais/TP2_final/memory.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -60,380 +57,456 @@
 # -- Compiling entity memory
 # -- Compiling architecture arch of memory
 # 
-vsim work.trab2
-# vsim work.trab2 
+vcom -reportprogress 300 -work work {/home/lucastinoco/Documents/Sistemas Digitais/TP2_final/top_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity top_tb
+# -- Compiling architecture tb of top_tb
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading entity Trab2
+vcom -reportprogress 300 -work work {/home/lucastinoco/Documents/Sistemas Digitais/TP2_final/top_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity top_tb
+# -- Compiling architecture tb of top_tb
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading entity Trab2
+vsim -do Trab2_run_msim_rtl_vhdl.do -l msim_transcript -i work.top_tb
+# vsim -do Trab2_run_msim_rtl_vhdl.do -l msim_transcript -i work.top_tb 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
 # Loading ieee.std_logic_arith(body)
 # Loading ieee.std_logic_unsigned(body)
+# Loading work.top_tb(tb)
 # Loading work.trab2(comportamento)
 # Loading work.ula(comportamento)
 # Loading work.multiply(comportamento)
 # Loading work.divide(comportamento)
 # Loading work.memory(arch)
-# ** Warning: (vsim-8683) Uninitialized out port /trab2/ULAX/PQ(7 downto 0) has no driver.
+# do Trab2_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
 # 
-# This port will contribute value (UUUUUUUU) to the signal network.
+# vcom -93 -work work {/home/lucastinoco/Documents/Sistemas Digitais/TP2_final/Trab2.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity Trab2
+# -- Compiling architecture comportamento of Trab2
+# vcom -93 -work work {/home/lucastinoco/Documents/Sistemas Digitais/TP2_final/multiply.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity multiply
+# -- Compiling architecture comportamento of multiply
+# ** Warning: /home/lucastinoco/Documents/Sistemas Digitais/TP2_final/multiply.vhd(22): (vcom-1073) Non-locally static choice (association #1, choice #1) is allowed only if it is the only choice of the only association.
+# vcom -93 -work work {/home/lucastinoco/Documents/Sistemas Digitais/TP2_final/divide.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity divide
+# -- Compiling architecture comportamento of divide
+# vcom -93 -work work {/home/lucastinoco/Documents/Sistemas Digitais/TP2_final/ULA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity ULA
+# -- Compiling architecture comportamento of ULA
+# ** Warning: /home/lucastinoco/Documents/Sistemas Digitais/TP2_final/ULA.vhd(28): (vcom-1074) Non-locally static OTHERS choice is allowed only if it is the only choice of the only association.
+# vcom -93 -work work {/home/lucastinoco/Documents/Sistemas Digitais/TP2_final/memory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity memory
+# -- Compiling architecture arch of memory
 # 
-add wave -position end  sim:/trab2/saida
-add wave -position end  sim:/trab2/clk
-force -freeze sim:/trab2/clk 1 0, 0 {5 ps} -r 10
-run
+add wave *
+run -all
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 1  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 1  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 1  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 1  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 1  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 1  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 1  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 1  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 1  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 1  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 1  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 1  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 1  Instance: /trab2/ULAX
+#    Time: 0 ps  Iteration: 1  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 90 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 90 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 90 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 90 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 90 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 90 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 90 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 90 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 90 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 90 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 90 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 90 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 90 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 90 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 90 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 90 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 90 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 90 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 90 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 90 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 90 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 90 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 90 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 90 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 90 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 90 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 90 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 90 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 90 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 90 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 160 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 160 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 160 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 160 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 160 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 160 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 160 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 160 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 160 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 160 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 160 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 160 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 160 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 160 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 160 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 160 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 240 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 240 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 240 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 240 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 240 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 240 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 240 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 240 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 240 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 240 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 240 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 240 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 240 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 240 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 240 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 240 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 240 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 240 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 240 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 240 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 240 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 240 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 240 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 240 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 240 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 240 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 240 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 240 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 240 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 240 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 310 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 310 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 310 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 310 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 310 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 310 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 310 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 310 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 310 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 310 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 310 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 310 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 310 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 310 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 310 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 310 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 310 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 310 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 310 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 310 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 310 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 310 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 310 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 310 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 310 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 310 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 310 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 310 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 310 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 310 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 380 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 380 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 380 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 380 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 380 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 380 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 380 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 380 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 380 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 380 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 380 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 380 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 380 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 380 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 380 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 380 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 380 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 380 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 380 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 380 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 380 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 380 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 380 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 380 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 380 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 380 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 380 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 380 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 380 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 380 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 460 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 460 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 460 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 460 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 460 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 460 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 460 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 460 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 460 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 460 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 460 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 460 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 460 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 460 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 460 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 460 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 460 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 460 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 460 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 460 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 460 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 460 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 460 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 460 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 460 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 460 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 460 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 460 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 460 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 460 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 540 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 540 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 540 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 540 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 540 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 540 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 540 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 540 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 540 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 540 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 540 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 540 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 540 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 540 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 540 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 540 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 540 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 540 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 540 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 540 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 540 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 540 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 540 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 540 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 540 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 540 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 540 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 540 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 540 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 540 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 620 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 620 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 620 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 620 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 620 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 620 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 620 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 620 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 620 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 620 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 620 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 620 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 620 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 620 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 620 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 620 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 620 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 620 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 620 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 620 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 620 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 620 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 620 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 620 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 620 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 620 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 620 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 620 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 620 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 620 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 990 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 990 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 990 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 990 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 990 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 990 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 990 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 990 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 990 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 990 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 990 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 990 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 990 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 990 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 990 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 990 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 990 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 990 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 990 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 990 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 990 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 990 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 990 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 990 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 990 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 990 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 990 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 990 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 990 ps  Iteration: 2  Instance: /trab2/ULAX
-run
+#    Time: 990 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 1190 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 1190 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 1190 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 1190 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 1190 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 1190 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 1190 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 1190 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 1190 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 1190 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 1190 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 1190 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 1190 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 1190 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 1190 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 1190 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 1190 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 1190 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 1190 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 1190 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 1190 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 1190 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 1190 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 1190 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 1190 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 1190 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 1190 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 1190 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 1190 ps  Iteration: 2  Instance: /trab2/ULAX
+#    Time: 1190 ns  Iteration: 3  Instance: /top_tb/UUT/ULAX
